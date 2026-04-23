@@ -1,0 +1,91 @@
+:root{
+    --vinotinto  : #630d16;
+    --oro: #a68966;
+    --crema: #fdfaf5;
+    --texto: #2d2323;
+    --white:#ffffff;
+}
+
+body{
+    background-color: var(--crema);
+    font-family: 'Popins', sans-serif;
+    color: var(--texto);
+    margin: 0;
+}
+
+.page-header {
+    background-color: var(--vinotinto);
+    margin-top: 0;
+    padding: 60px 20px 60px 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0,15);
+    border-bottom: 3px solid var(--oro);
+    text-align: center;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: var(--white);
+    font-size: 52pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0,2);
+    letter-spacing: 1px;
+}
+
+.content {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--vinotinto);
+    font-weight: 700;
+}
+
+.date {
+    color: var(--oro);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu {
+    color: var(--white);
+    float: right;
+    font-size: 22pt;
+    margin-right: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+.top-menu:hover, .top-menu:visited {
+    color: var(--oro);
+    opacity: 1;
+}
+
+.post {
+    margin-bottom: 50px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 4px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid var(--white);
+    transition: all 0.4 ease;
+
+}
+
+.post h2 a, .post h2 a:visited {
+    color: var(--vinotinto);
+    text-decoration: none;
+    font-size: 2rem;
+}
