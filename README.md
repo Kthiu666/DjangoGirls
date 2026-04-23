@@ -1,0 +1,2 @@
+DjangoGirls 2026
+Primer proyecto
