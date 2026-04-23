@@ -1,91 +1,119 @@
-:root{
-    --vinotinto  : #630d16;
+/* Paleta de colores */
+:root {
+    --vinotinto: #630d16;
     --oro: #a68966;
     --crema: #fdfaf5;
     --texto: #2d2323;
-    --white:#ffffff;
+    --white: #ffffff;
+    --sombra: rgba(99, 13, 22, 0.1); /* Sombra con un toque de vinotinto */
 }
 
-body{
+body {
     background-color: var(--crema);
-    font-family: 'Popins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--texto);
     margin: 0;
+    line-height: 1.8; /* Más espacio entre líneas para leer mejor la receta */
 }
 
+/* Encabezado más imponente */
 .page-header {
     background-color: var(--vinotinto);
-    margin-top: 0;
-    padding: 60px 20px 60px 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0,15);
-    border-bottom: 3px solid var(--oro);
+    padding: 80px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-bottom: 5px solid var(--oro);
     text-align: center;
+    margin-bottom: 50px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.page-header h1 a {
     color: var(--white);
-    font-size: 52pt;
+    font-size: 5rem; /* Título grande */
     text-decoration: none;
     font-family: 'Lobster', cursive;
-    text-shadow: 3px 3px 0px rgba(0,0,0,0,2);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
+/* Contenedor principal ajustado */
 .content {
-    max-width: 850px;
-    margin: 50px auto;
-    padding: 0 20px;
+    max-width: 900px; /* Ancho ideal para lectura */
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
-h1, h2, h3, h4 {
+/* El Post estilo "Ficha de Receta" */
+.post {
+    background: var(--white);
+    margin-bottom: 60px;
+    padding: 60px; /* Mucho espacio interno para que el texto respire */
+    border-radius: 2px; /* Esquinas casi rectas para un look más editorial */
+    box-shadow: 15px 15px 0px var(--oro); /* Sombra sólida estilo retro/elegante */
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.post:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 20px 20px 0px var(--vinotinto); /* Cambia de color al pasar el mouse */
+}
+
+/* Título de la Receta */
+.post h2 {
+    margin: 0 0 15px 0;
     font-family: 'Playfair Display', serif;
-    color: var(--vinotinto);
-    font-weight: 700;
+    font-size: 3rem; /* Letra bien grande */
+    font-weight: 900;
+    line-height: 1.1;
 }
 
+.post h2 a {
+    color: var(--vinotinto);
+    text-decoration: none;
+}
+
+/* Fecha y detalles */
 .date {
     color: var(--oro);
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    margin-bottom: 20px;
-    font-size: small;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 30px;
+    text-transform: lowercase;
 }
 
-.save {
-    float: right;
+/* El contenido de la receta (el cuerpo) */
+.post p {
+    font-size: 1.3rem; /* Tamaño de letra aumentado */
+    color: var(--texto);
+    text-align: left; /* Alineado a la izquierda para mejor lectura de pasos */
+    margin-bottom: 1.5rem;
 }
 
-.post-form textarea, .post-form input {
-    width: 100%;
-}
-
+/* Menú superior */
 .top-menu {
-    color: var(--white);
     float: right;
-    font-size: 22pt;
-    margin-right: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    opacity: 0.9;
-}
-.top-menu:hover, .top-menu:visited {
-    color: var(--oro);
-    opacity: 1;
-}
-
-.post {
-    margin-bottom: 50px;
-    background: var(--white);
-    padding: 40px;
-    border-radius: 4px;
-    border-left: 1px solid #eee;
-    border-right: 1px solid var(--white);
-    transition: all 0.4 ease;
-
-}
-
-.post h2 a, .post h2 a:visited {
-    color: var(--vinotinto);
-    text-decoration: none;
+    color: var(--white);
     font-size: 2rem;
+    margin-top: -60px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.top-menu:hover {
+    color: var(--oro);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    .post {
+        padding: 30px;
+        box-shadow: 8px 8px 0px var(--oro);
+    }
+    .post h2 {
+        font-size: 2rem;
+    }
+    .page-header h1 {
+        font-size: 3rem;
+    }
 }
