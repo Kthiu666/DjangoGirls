@@ -8,22 +8,24 @@
     --sombra: rgba(99, 13, 22, 0.1); /* Sombra con un toque de vinotinto */
 }
 
-body {
+body,html {
     background-color: var(--crema);
     font-family: 'Poppins', sans-serif;
     color: var(--texto);
     margin: 0;
+    padding: 0;
     line-height: 1.8; /* Más espacio entre líneas para leer mejor la receta */
 }
 
 /* Encabezado más imponente */
 .page-header {
     background-color: var(--vinotinto);
-    padding: 80px 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border-bottom: 5px solid var(--oro);
+    margin: 0 0 50px 0; /* Cero margen arriba */
+    padding: 40px 20px 60px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-bottom: 6px solid var(--oro);
     text-align: center;
-    margin-bottom: 50px;
+    position: relative;
 }
 
 .page-header h1 a {
@@ -36,7 +38,7 @@ body {
 
 /* Contenedor principal ajustado */
 .content {
-    max-width: 900px; /* Ancho ideal para lectura */
+    max-width: 1000px; /* Ancho ideal para lectura */
     margin: 0 auto;
     padding: 0 25px;
 }
@@ -45,23 +47,23 @@ body {
 .post {
     background: var(--white);
     margin-bottom: 60px;
-    padding: 60px; /* Mucho espacio interno para que el texto respire */
-    border-radius: 2px; /* Esquinas casi rectas para un look más editorial */
-    box-shadow: 15px 15px 0px var(--oro); /* Sombra sólida estilo retro/elegante */
+    padding: 60px; 
+    border-radius: 2px; 
+    box-shadow: 15px 15px 0px var(--oro); 
     border: 1px solid #eee;
     transition: all 0.3s ease;
 }
 
 .post:hover {
     transform: translate(-5px, -5px);
-    box-shadow: 20px 20px 0px var(--vinotinto); /* Cambia de color al pasar el mouse */
+    box-shadow: 20px 20px 0px var(--vinotinto); 
 }
 
 /* Título de la Receta */
 .post h2 {
     margin: 0 0 15px 0;
     font-family: 'Playfair Display', serif;
-    font-size: 3rem; /* Letra bien grande */
+    font-size: 3rem; 
     font-weight: 900;
     line-height: 1.1;
 }
@@ -84,9 +86,9 @@ body {
 
 /* El contenido de la receta (el cuerpo) */
 .post p {
-    font-size: 1.3rem; /* Tamaño de letra aumentado */
+    font-size: 1.3rem; 
     color: var(--texto);
-    text-align: left; /* Alineado a la izquierda para mejor lectura de pasos */
+    text-align: left; 
     margin-bottom: 1.5rem;
 }
 
